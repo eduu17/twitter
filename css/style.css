@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  max-width: 1fr;
+  justify-content: center;
+  background: url("https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png");
+}
+
+.logo svg {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+.content {
+  display: grid;
+  place-content: center;
+}
+
+.content-logo {
+  margin: 0 30px;
+}
+
+.content-logo img {
+  max-width: 100%;
+  width: 50px;
+}
+
+h1 {
+  font-size: 64px;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.link-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 90px;
+}
+
+.link-content a {
+  display: flex;
+  max-width: 250px;
+  align-items: center;
+  color: black;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 5px;
+  font-size: 16px;
+}
+
+.link-content a img {
+  width: 28px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.geral {
+  margin: 40px 30px;
+}
+
+.geral a {
+  display: inline-block;
+  width: 320px;
+  background-color: #00acee;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.geral h3 {
+  padding-bottom: 20px;
+}
+
+.geral a:last-of-type {
+  color: #00acee;
+  background-color: inherit;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    grid-area: 2;
+  }
+  .logo svg {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .geral {
+    margin: 20px;
+  }
+  .geral a {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo svg {
+    max-width: 100px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .link-content {
+    margin: 0 20px;
+    place-items: center;
+  }
+  .geral a {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .link-content {
+    margin: 0 30px;
+    max-width: inherit;
+  }
+  .geral {
+    margin: 10px inherit;
+  }
+  .geral a {
+    display: block;
+    width: 100%;
+  }
+}
